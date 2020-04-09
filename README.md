@@ -1,44 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+GOALS FOR TODAY:
+1:React states.
+2: COnditional rendering with IF and NOT IF and foreach loop.
+3: getting inputs from inputs in react.
+4: Go through login page example
 
-In the project directory, you can run:
 
-### `npm start`
+Reminder: Always remember that you're in your react application's folder that contains package.json when you go 
+to run any npm commands. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1: Create a new react project:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+npx create-react-app appname --use-npm --typescript
 
-### `npm test`
+2: If you don't have the node_modules folder filled 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install 
 
-### `npm run build`
+3: Install semantic ui react
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+a. Run this command to install with npm.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```npm install semantic-ui-react```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+b. Put this line at the top of your index.html file
 
-### `npm run eject`
+```<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4: To begin running your react application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```npm start```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5: To end the application instance running
 
-## Learn More
+Go to your terminal running the application, the same one you ran ```npm start``` in and then hit ```ctrl + c``` keys on your
+keyboard at the same time. That is not a command you "write into the terminal". You simply select that particular terminal and
+then press that key combination ```ctrl + c```. This will end the process running in that terminal.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
