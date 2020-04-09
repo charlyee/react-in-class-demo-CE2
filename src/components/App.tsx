@@ -18,6 +18,7 @@ interface IState {
 export default class App extends React.Component<IAppProps, IState> {
   constructor(props: IAppProps) {
     super(props);
+
     this.state = {
       menuItems: [
         {
@@ -31,10 +32,14 @@ export default class App extends React.Component<IAppProps, IState> {
         {
           key: "some other page",
           name: "Other Page"
+        },
+        {
+          key: "some other page",
+          name: "Other Page"
         }
       ],
       isButtonPressed: false,
-      userName: "Matt"
+      userName: "default"
     }
   }
 
@@ -59,25 +64,38 @@ export default class App extends React.Component<IAppProps, IState> {
     this.setState({ isButtonPressed: false })
   }
 
+  //Try on your own: Using "normal" function syntax rather than fat arrow syntax.
+  //Notice that the error says "setState" doesn't exist.
   public onClickUserNameSetButton = (newUserName: string) => {
     console.log(this.state)
     this.setState({ userName: newUserName });
   }
 
+
   public render() {
     let { menuItems, isButtonPressed, userName } = this.state;
-
     return (
       <Fragment>
         <div className="App">
-          <NavBar appName="Sample App" isUserLoggedIn={false} menuOptions={menuItems} />
+
+
+          <NavBar
+            appName="Sample App"
+            isUserLoggedIn={false}
+            menuOptions={menuItems} />
+
+
           <MainSection
             isButtonPressed={isButtonPressed}
             callbackMethod={this.onClickButton}
             callbackMethodToGoBack={this.onClickButtonToGoBack}
             userName={userName}
             onClickUserNameSetButton={this.onClickUserNameSetButton} />
+
+
           <SectionWithLoopRendering />
+
+
         </div>
       </Fragment>
     );

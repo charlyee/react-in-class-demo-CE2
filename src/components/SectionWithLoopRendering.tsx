@@ -12,8 +12,10 @@ interface ISectionWithLoopRenderingState {
 }
 
 export default class SectionWithLoopRendering extends React.Component<ISectionWithLoopRenderingProps, ISectionWithLoopRenderingState> {
+    
     constructor(props: ISectionWithLoopRenderingProps) {
         super(props);
+        
         this.state = {
             userProfiles: [
                 {
@@ -38,8 +40,11 @@ export default class SectionWithLoopRendering extends React.Component<ISectionWi
         }
     }
 
+
+
     public render() {
         const { userProfiles } = this.state;
+        
         return (
             <Grid>
                 {
@@ -52,4 +57,8 @@ export default class SectionWithLoopRendering extends React.Component<ISectionWi
             </Grid>
         );
     }
+
+
+
+
 }

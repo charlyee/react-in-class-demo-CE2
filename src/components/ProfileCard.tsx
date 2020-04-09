@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Card, Image, Icon } from 'semantic-ui-react';
 
-export interface IAppProps {
+export interface IProfileCardProps {
     userName: string;
 }
 
-export default class App extends React.Component<IAppProps> {
+export default class ProfileCard extends React.Component<IProfileCardProps> {
     public render() {
         const { userName } = this.props;
         return (
