@@ -4,6 +4,7 @@ import { IMenuItem } from '../models/menuItem';
 import NavBar from './Navbar';
 import { Fragment } from 'react';
 import MainSection from './MainSection';
+import SectionWithLoopRendering from './SectionWithLoopRendering';
 
 export interface IAppProps {
 }
@@ -76,6 +77,7 @@ export default class App extends React.Component<IAppProps, IState> {
             callbackMethodToGoBack={this.onClickButtonToGoBack}
             userName={userName}
             onClickUserNameSetButton={this.onClickUserNameSetButton} />
+          <SectionWithLoopRendering />
         </div>
       </Fragment>
     );
