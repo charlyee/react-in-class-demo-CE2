@@ -1,9 +1,15 @@
 
 GOALS FOR TODAY:
+
 1:React states.
-2: COnditional rendering with IF and NOT IF and foreach loop.
+
+2: Ccnditional rendering with IF and NOT IF and foreach loop.
+
 3: getting inputs from inputs in react.
+
 4: Go through login page example
+
+====================
 
 
 Reminder: Always remember that you're in your react application's folder that contains package.json when you go 
