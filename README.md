@@ -19,7 +19,7 @@ to run any npm commands.
 
 npx create-react-app appname --use-npm --typescript
 
-2: If you don't have the node_modules folder filled 
+2: If you don't have the node_modules folder filled  (You will NOT have a node_modules folder if you just clone this repo! Heads up!)
 
 npm install 
 
