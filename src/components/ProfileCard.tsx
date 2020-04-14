@@ -6,17 +6,23 @@ export interface IProfileCardProps {
 }
 
 export default class ProfileCard extends React.Component<IProfileCardProps> {
-
+    //Component did mount will be AUTOMATICALLY invoked when 
+    //this component is initially created.
     componentDidMount() {
       console.log("This component did mount!");
     }
 
+    //Component did update will AUTOMATICLALY be invoked when this
+    //component has an update, so stuff like state changes or parent
+    //changes.
     componentDidUpdate(){
         const { userName } = this.props;
         console.log("This component just updated!");
         console.log(`New Value for component is ${userName}`);
     }
 
+    //Component will unmount will be AUTOMATICALLY be invoked when 
+    //this component is to be destroyed/removed from view..
     componentWillUnmount(){
         console.log("This component just unmounted!");
     }
