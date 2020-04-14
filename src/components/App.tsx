@@ -13,6 +13,7 @@ interface IState {
   menuItems: IMenuItem[];
   isButtonPressed: boolean;
   userName: string;
+  password: string | number;
 }
 
 export default class App extends React.Component<IAppProps, IState> {
@@ -22,24 +23,29 @@ export default class App extends React.Component<IAppProps, IState> {
     this.state = {
       menuItems: [
         {
-          key: "home page",
+          id: 1,
+          key: "1",
           name: "Home Page"
         },
         {
-          key: "profile page",
+          id: 2,
+          key: "2",
           name: "Profile"
         },
         {
-          key: "some other page",
+          id: 3,
+          key: "3",
           name: "Other Page"
         },
         {
-          key: "some other page",
+          id: 4,
+          key: "4",
           name: "Other Page"
         }
       ],
       isButtonPressed: false,
-      userName: "default"
+      userName: "default",
+      password: "dasdasda"
     }
   }
 
@@ -94,6 +100,11 @@ export default class App extends React.Component<IAppProps, IState> {
 
 
           <SectionWithLoopRendering />
+
+          <NavBar
+            appName="Sample App"
+            isUserLoggedIn={false}
+            menuOptions={menuItems} />
 
 
         </div>
