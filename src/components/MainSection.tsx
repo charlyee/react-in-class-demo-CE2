@@ -31,6 +31,7 @@ export default class MainSection extends React.Component<IMainSectionProps> {
 
         return (
             <Grid>
+    
                 <Grid.Row centered>
                     {buttonPressHeader}
                 </Grid.Row>

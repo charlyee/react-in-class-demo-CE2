@@ -12,6 +12,7 @@ interface IState {
 export default class SpecialInputSection extends React.Component<ISpecialInputSectionProps, IState> {
     constructor(props: ISpecialInputSectionProps) {
         super(props);
+        
         this.state = {
             userName: ""
         }

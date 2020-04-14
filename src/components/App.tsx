@@ -5,6 +5,8 @@ import NavBar from './Navbar';
 import { Fragment } from 'react';
 import MainSection from './MainSection';
 import SectionWithLoopRendering from './SectionWithLoopRendering';
+import SpecialButtonTwo from './SpecialButtonTwo';
+import NewerComponent from './NewerComponent';
 
 export interface IAppProps {
 }
@@ -70,6 +72,18 @@ export default class App extends React.Component<IAppProps, IState> {
     this.setState({ isButtonPressed: false })
   }
 
+  public addAnotherMenuItem = () => {
+    let { menuItems } = this.state;
+
+    menuItems.push({
+      id: 5,
+      key: "5",
+      name: "Added A New Menu Item"
+    })
+
+    this.setState({ menuItems });
+  }
+
   //Try on your own: Using "normal" function syntax rather than fat arrow syntax.
   //Notice that the error says "setState" doesn't exist.
   public onClickUserNameSetButton = (newUserName: string) => {
@@ -82,6 +96,7 @@ export default class App extends React.Component<IAppProps, IState> {
     let { menuItems, isButtonPressed, userName } = this.state;
     return (
       <Fragment>
+        <NewerComponent/>
         <div className="App">
 
 
@@ -100,6 +115,7 @@ export default class App extends React.Component<IAppProps, IState> {
 
 
           <SectionWithLoopRendering />
+          <SpecialButtonTwo callBack={this.addAnotherMenuItem} />
         </div>
       </Fragment>
     );
