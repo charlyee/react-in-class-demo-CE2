@@ -100,13 +100,6 @@ export default class App extends React.Component<IAppProps, IState> {
 
 
           <SectionWithLoopRendering />
-
-          <NavBar
-            appName="Sample App"
-            isUserLoggedIn={false}
-            menuOptions={menuItems} />
-
-
         </div>
       </Fragment>
     );

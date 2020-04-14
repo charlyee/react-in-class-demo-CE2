@@ -39,8 +39,6 @@ export default class SectionWithLoopRendering extends React.Component<ISectionWi
         }
     }
 
-
-
     public render() {
         const { userProfiles } = this.state;
         

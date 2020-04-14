@@ -25,6 +25,52 @@ export default class SpecialInputSection extends React.Component<ISpecialInputSe
     public render() {
         const { onClickUserNameSetButton } = this.props;
         const { userName } = this.state;
+
+        let userNameExampleTwo = "Bob";
+
+        let changedUserList = [
+            {
+                id: 1,
+                username: "BobChangedName",
+                favoritePizza: "ChangedPizza",
+                faveColor: "ChangedFaveColor"
+            },
+            {
+                id: 2,
+                username: "BobChangedName",
+                favoritePizza: "ChangedPizza",
+                faveColor: "ChangedFaveColor"
+            },
+            {
+                id: 3,
+                username: "BobChangedName",
+                favoritePizza: "ChangedPizza",
+                faveColor: "ChangedFaveColor"
+            },
+            {
+                id: 4,
+                username: "BobChangedName",
+                favoritePizza: "ChangedPizza",
+                faveColor: "ChangedFaveColor"
+            },
+        ]
+
+        //4diff users, 4 diff properties.
+        //change name of person BoB. 4 properties change rather than 1.
+        /*
+
+
+        {
+            id: 1,
+            username: "BobChangedName",
+            favoritePizza: "ChangedPizza",
+            faveColor: "ChangedFaveColor"
+        }
+
+
+
+
+        */
         return (
             <Grid>
                 <Grid.Row centered>
@@ -34,7 +80,10 @@ export default class SpecialInputSection extends React.Component<ISpecialInputSe
                     <Input placeholder='Enter Text Here...' onChange={this.onInputFieldChange} />
                 </Grid.Row>
                 <Grid.Row centered>
-                    <Button content="Submit New Username" color="green" onClick={() => onClickUserNameSetButton(userName)} />
+                    <Button
+                        content="Submit New Username"
+                        color="green"
+                        onClick={() => onClickUserNameSetButton(userName)} />
                 </Grid.Row>
             </Grid>
         );

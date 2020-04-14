@@ -12,13 +12,6 @@ export default class NavBar extends React.Component<INavBarProps> {
     public render() {
         let {  menuOptions } = this.props;
 
-        //Can't change something? We call that immutable. "readonly"
-        // menuOptions = [{
-        //     key: "string",
-        //     name: "string"
-        // }];
-
-
         return (
             <React.Fragment>
                 <Menu items={menuOptions} />
